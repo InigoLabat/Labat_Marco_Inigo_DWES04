@@ -1,0 +1,152 @@
+{
+    "info": {
+        "_postman_id": "9a920efd-e38c-4686-9bec-ac015100d331",
+        "name": "DAWS04",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Mostrar todo",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/get",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "get"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "description": "Mediante esta solicitud GET obtenemos todos los atletas almacenados junto con su información"
+            }
+        },
+        {
+            "name": "Mostrar atleta por ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/get/5",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "get",
+                        "5"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "description": "Median te esta solicitud GET obtenemos el atleta con un ID concreto, junto con su información. En este caso se ha seleccionado el ID 5, pero cambiando el valor numérico de la url cambiaremos el ID seleccionado."
+            }
+        },
+        {
+            "name": "Mostrar atleta por club ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/getbyclub/1",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "getbyclub",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "description": "Median te esta solicitud GET obtenemos todos los atletas pertenecientes a un club en concreto, junto con sus datos, usando el ID del club. En este caso se han seleccionado los atletas con el id_club 2, pero cambiando el valor numérico de la url cambiaremos el ID seleccionado."
+            }
+        },
+        {
+            "name": "Crear atleta",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/create",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "create"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nombre\" : \"Inigo\",\n  \"apellido\" : \"Labat\",\n  \"id_club\" : \"1\",\n  \"prueba\" : \"400\",\n  \"marca\" : \"46\"\n}"
+                },
+                "description": "Mediante esta solicitud POST, crearíamos un nuevo atleta. En el body de la solicitud se pasa la información a almacenar mediante un JSON."
+            }
+        },
+        {
+            "name": "Actualizar atleta",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/update/1",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "update",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"id_club\": 2\n}"
+                },
+                "description": "Mediante esta solicitud PUT, actualiza la información almacenada de un atleta ya creado usando su ID como referencia. En la url, especificamos el ID del atletas a actualizar, en este caso el ID 1. En el body de la solicitud se pasa la información a actualizar mediante un JSON."
+            }
+        },
+        {
+            "name": "Eliminar atleta",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost/DWES04/public/atleta/delete/8",
+                    "path": [
+                        "DWES04",
+                        "public",
+                        "atleta",
+                        "delete",
+                        "8"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "description": "Mediante esta consulta DELETE, elimina un atleta específico usando como referencia su ID. En la url, especificamos el ID del atleta a eliminar, en este caso el ID 8, pero se podría modificar este valor."
+            }
+        }
+    ]
+}

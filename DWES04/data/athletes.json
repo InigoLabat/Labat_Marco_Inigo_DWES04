@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Usain Bolt",
+        "age": 37
+    },
+    {
+        "id": 2,
+        "name": "Mo Farah",
+        "age": 40
+    },
+    {
+        "id": 3,
+        "name": "Allyson Felix",
+        "age": 38
+    },
+    {
+        "id": 4,
+        "name": "Eliud Kipchoge",
+        "age": 39
+    },
+    {
+        "id": 5,
+        "name": "Shelly-Ann Fraser-Pryce",
+        "age": 36
+    },
+    {
+        "id": 6,
+        "name": "Yulimar Rojas",
+        "age": 28
+    },
+    {
+        "id": 7,
+        "name": "Karsten Warholm",
+        "age": 28
+    },
+    {
+        "id": 8,
+        "name": null,
+        "age": null
+    }
+]
